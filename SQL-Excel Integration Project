@@ -9,15 +9,15 @@ SELECT * FROM FactInternetSales WHERE YEAR(OrderDate) = 2013
 GO
 ALTER VIEW INTERNET_SALES AS 
 SELECT 
-    SalesOrderNumber AS 'ORDER NUMBER',
+    SalesOrderNumber AS 'ORDER_NUMBER',
     OrderDate AS 'ORDER DATE',
     EnglishProductCategoryName 'CATEGORY',
-    FIRSTNAME + ' ' + LASTNAME AS 'CUSTOMER NAME',
+    FIRSTNAME + ' ' + LASTNAME AS 'CUSTOMER_NAME',
     GENDER AS 'GENDER',
     SALESTERRITORYCOUNTRY AS 'COUNTRY',
-    OrderQuantity AS 'ORDER QTY',
-    TotalProductCost AS 'PRODUCT COST',
-    SALESAMOUNT AS 'SALES AMOUNT'
+    OrderQuantity AS 'ORDER_QTY',
+    TotalProductCost AS 'PRODUCT_COST',
+    SALESAMOUNT AS 'SALES_AMOUNT'
 FROM 
     FactInternetSales
         INNER JOIN DimCustomer
